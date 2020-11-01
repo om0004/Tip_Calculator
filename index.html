@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<meta name="viewport" content="width=device-width, initial-scale=0.5">
+	<title>Tip Calculator</title>
+	<link rel="stylesheet" href="tip.css">
+</head>
+<body onload="fun()">
+	<div id="outer">
+	<div id="inner">
+	<h1>Tip Calculator</h1>	
+	</div>
+<div id="inner1">
+    <table>
+    	<tr>
+    		<td><label for="bill">Bill Amount(₹)</label></td>
+    		<td><input type="number" id="bill" class="box" placeholder="Enter your total bill"oninput="cat()"style="text-align:center"></td>
+    	</tr>
+    	<tr>
+    		<td><label for="tip">Tip</label></td>
+    		<td><input type="range" min="1" max="100" value="50" id="tip" class="slider">&nbsp;&nbsp;&nbsp;&nbsp;<span id="caltip"></span></td>
+    	</tr>
+    	<tr>
+    		<td><label for="split">Split(No of person's)</label></td>
+    		<td><input type="range" min="1" max="10" value="5" id="split" class="slider">&nbsp;&nbsp;&nbsp;&nbsp;<span id="calsplit"></span></td> 
+    	</tr>
+    	<tr>
+    		<td colspan="2"><button style="font-size:25px"id="calculate"onclick="calc()">Calculate</button></td>
+    	</tr>	
+     </table>
+
+</div>
+<div id="inner2">
+	<table>
+    	<tr>
+    		<td><label for="nbill">New Bill(Per Person)</label></td>
+    		<td><input type="number" id="nbill" disabled class="box"></td>
+    	</tr>
+    	<tr>
+    		<td><label for="ntip">Tip Amount(Per Person)</label></td>
+    		<td><input type="number"id="ntip" disabled class="box"></td>
+    	</tr>
+    	<tr>
+    		<td><label for="tbill">Total Bill(Per Person)</label></td>
+    		<td><input type="number" id="tbill" disabled class="box"></td>
+    	</tr>
+    	<tr>
+    		<td><label for="total_bill">Total Amount Paid</label></td>
+    		<td><input type="number" id="total_bill" disabled class="box"></td>
+    	</tr>	
+    </table>
+</div>	
+</div>
+<script src="tip_js.js"></script>
+</body>
+</html>
